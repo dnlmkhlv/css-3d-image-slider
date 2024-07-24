@@ -1,0 +1,119 @@
+@import url("https://fonts.cdnfonts.com/css/ica-rubrik-black");
+@import url("https://fonts.cdnfonts.com/css/poppins");
+
+body {
+  background-color: rgb(225, 225, 225);
+}
+
+.banner {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner__title {
+  width: 200px;
+  height: 200px;
+  margin: 370px auto;
+}
+
+.banner__title h1 {
+  font-size: 100px;
+  font-family: fantasy;
+  letter-spacing: 10px;
+}
+
+.banner .slider {
+  position: absolute;
+  width: 200px;
+  height: 250px;
+  top: 10%;
+  left: calc(50% - 100px);
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  animation: autoRun 20s linear infinite;
+  /*z-index: 2;*/
+}
+@keyframes autoRun {
+  from {
+    transform: perspective(1000px) rotateX(-20deg) rotateY(0deg);
+  }
+  to {
+    transform: perspective(1000px) rotateX(-20deg) rotateY(360deg);
+  }
+}
+
+.banner .slider .item {
+  position: absolute;
+  inset: 0 0 0 0;
+  transform: rotateY(
+      calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)
+    )
+    translateZ(550px);
+}
+
+.banner .slider .item img {
+  width: 100%;
+  height: 100%; /* 100% */
+  object-fit: cover;
+  border-radius: 40px;
+  border: 5px solid rgba(255, 0, 0, 0.8);
+  opacity: 0.9;
+}
+
+.banner .content {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1400px, 100vw);
+  height: max-content;
+  padding-bottom: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+.banner .content h1 {
+  font-family: "ICA Rubrik";
+  font-size: 14em;
+  line-height: 1em;
+  color: #25283b;
+  position: relative;
+}
+
+.banner .content h1::after {
+  position: absolute;
+  inset: 0 0 0 0;
+  content: attr(data-content);
+  z-index: 2;
+  -webkit-text-stroke: 3px #cdcdcd;
+  color: transparent;
+}
+
+.banner .content .author {
+  font-family: Poppins;
+  text-align: right;
+  max-width: 200px;
+}
+
+.banner .content h2 {
+  font-size: 3em;
+}
+
+.banner .content .model {
+  background-image: url("images/joker-front.png");
+  width: 100%;
+  height: 50vh; /* 75vh */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-size: auto 130%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  z-index: 1;
+}
