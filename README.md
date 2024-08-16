@@ -1,6 +1,7 @@
 # CSS 3D Image Slider
 A visually appealing 3D image slider created using HTML and CSS, featuring a Joker theme.
-Description
+
+## Description
 This project showcases a 3D image slider that rotates automatically, displaying a series of Joker-themed images. The slider is built entirely with HTML and CSS, demonstrating advanced CSS techniques including 3D transforms, animations, and responsive design.
 
 ## Features
