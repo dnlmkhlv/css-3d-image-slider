@@ -18,7 +18,7 @@ This project showcases a 3D image slider that rotates automatically, displaying 
 
 1. Clone the repository:
 ```
-git clone https://github.com/yourusername/css-3d-image-slider.git
+git clone https://github.com/dnlmkhlv/css-3d-image-slider.git
 ```
 
 2. Open the index.html file in your web browser.
